@@ -2,7 +2,7 @@
 #include<conio.h>
 #include<stdlib.h>
 struct node{
-int dat;
+int data;
 node*prev,*next;
 }*head=NULL;
 void ins_beg(int v){
