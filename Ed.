@@ -1,0 +1,27 @@
+# include <iostream.h>
+# include <conio.h>
+const int V = 5;
+void bfs (int g[V][V], int start) {
+ int vis[V], q[20], f=0, r=-1;
+ for (int i=0; i<V; i++) vis[i]=0;
+ vis[start]=1;
+ q[++r]=start;
+ cout << "BFS: ";
+ while (f<=r) {
+  int u = q[f++];
+  cout << u << " ";
+  for (int v=0; v<V; v++) {
+   if (g[u][v]==1 && vis[v]==0) {
+    vis[v]=1;
+    q[++r]=v;
+ }}} cout << "\n";
+}
+
+void main() {
+ clrscr();
+ int g[V][V] = {
+ {0,1,1,0,0},
+ {1,0,0,1,1}
+ {1,0,0,0,0}
+ {0,1,1,0,0}
+ };
